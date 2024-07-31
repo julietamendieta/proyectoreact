@@ -1,0 +1,23 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(97, 128, 196);
+    align-items: center;
+}
+
+.nav-logo{
+    color: white;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.nav-list a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
