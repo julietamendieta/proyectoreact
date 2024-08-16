@@ -1,20 +1,20 @@
 import "./Navbar.css"
 import "../CartWidget/CartWidget"
 import CartWidget from "../CartWidget/CartWidget";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
         <div>
-            <h1 className="nav-logo">Mundo <br/> literario</h1>
+            <Link to="/" className="nav-logo">Mundo <br/> literario</Link>
         </div>
         <div>
             <ul className="nav-list">
-                <li><a href="">Fantasía</a></li>
-                <li><a href="">Romance</a></li>
-                <li><a href="">Thriller/Misterio</a></li>
-                <li><a href="">Ficción literaria</a></li>
-                <li><a href="">No Ficción</a></li>
+                <li><NavLink to="/category/Fantasia" className="linkto" activeClassName= "active">Fantasía</NavLink></li>
+                <li><NavLink to="/category/Romance" className="linkto" activeClassName= "active">Romance</NavLink></li>
+                <li><NavLink to="/category/ThrillerMisterio" className="linkto" activeClassName= "active">Thriller/Misterio</NavLink></li>
+                <li><NavLink to="/category/FiccionLiteraria" className="linkto" activeClassName= "active">Ficción literaria</NavLink></li>
             </ul>
         </div>
         <CartWidget/>

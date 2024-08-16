@@ -8,16 +8,23 @@
 
 .nav-logo{
     color: white;
+    text-decoration: none;
+    font-size: 30px;
 }
 
 .nav-list{
     display: flex;
     justify-content: space-around;
     list-style-type: none;
+    font-size: 25px;
 }
 
-.nav-list a{
+.linkto{
     text-decoration: none;
     color: white;
     padding: 20px;
+}
+
+.active{
+    color: dimgray;
 }
