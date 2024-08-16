@@ -13,7 +13,7 @@ const ItemCount = ({stock}) => {
     }
 
     const increment = () =>{
-        if(count < stock){                 //En este caso, 10 representa el stock total del producto
+        if(count < stock){          
             setCount(count + 1)
         }
     }
