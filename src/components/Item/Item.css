@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content:space-evenly;
     width: 210px;
-    height: 450px;
+    height: 500px;
     border: 1px solid rgb(97, 128, 196);
     border-radius: 8px;
 }
@@ -21,20 +21,27 @@
 
 .card h2{
     font-size: 20px;
-    padding: 10px 4px;
+    padding: 5px 10px;
 }
 
-.card h3{
+.card .author{
     font-size: 15px;
-    padding: 0 4px;
+    font-weight: 600;
+    color: rgb(97, 128, 196);
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
 
-.card p{
+.card .category{
     font-size: 15px;
     color: rgb(97, 128, 196);
-    font-weight: 500;
+    padding-left: 10px;
+}
+
+.card .price{
+    font-size: 20px;
+    color: rgb(97, 128, 196);
     text-align: center;
-    padding-top: 5px;
 }
 
 .item-link{

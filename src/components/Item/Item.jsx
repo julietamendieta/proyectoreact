@@ -8,8 +8,9 @@ const Item = ({item}) => {
       <div key={item.id} className="card">
           <img src={item.image} alt={item.name}/>
           <h2>{item.name}</h2>
-          <h3>{item.category}</h3>
-          <p>${item.price}</p>
+          <p className='author'>{item.author}</p>
+          <p className='category'>{item.category}</p>
+          <p className='price'>${item.price}</p>
       </div>      
     </Link>
     )
