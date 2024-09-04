@@ -1,3 +1,15 @@
+.cart-icon{
+    display: flex;
+}
+
 p{
     color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+img{
+    width: 30px;
+    height: 30px;
+    padding-right: 10px;
 }
