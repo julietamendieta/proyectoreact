@@ -29,7 +29,7 @@ const ItemDetail = ({product}) => {
         
         {showItemCount && product.stock !== 0 ? (<ItemCount initial={1} stock={product.stock} onAdd={onAdd} />) : 
         (<div>
-          {product.stock === 0 ? (<div><p>Producto agotado.</p><Link>Volver al inicio.</Link></div>) : ("")}
+          {product.stock === 0 ? (<div><p>Producto agotado.</p><Link to={"/"}>Volver al inicio.</Link></div>) : ("")}
           <Link to={"/cart"}>Ir al carrito</Link>
         </div>)}
       </div>

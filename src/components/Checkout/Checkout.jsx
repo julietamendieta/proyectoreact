@@ -57,12 +57,10 @@ const Checkout = () => {
                 clearCart();
             })
             .catch((error) => {
-                console.log("Error en actualización de stock", error)
                 setError("No se puede actualizar el stock, inténtelo nuevamente.")
             });
         })
         .catch((error) => {
-            console.log("Error en actualización de stock", error)
             setError("No se puede actualizar el stock, inténtelo nuevamente.")
         })
     };
@@ -85,25 +83,25 @@ const Checkout = () => {
             </div>
             <form onSubmit={handleForm}>
                 <div className='formFields'>
-                    <label htmlFor="">Nombre</label>
+                    <label>Nombre</label>
                     <input type="text" onChange={(e) => setNombre(e.target.value)}/>
                 </div>
                 <div className='formFields'>
-                    <label htmlFor="">Apellido</label>
+                    <label>Apellido</label>
                     <input type="text" onChange={(e) => setApellido(e.target.value)}/>
                 </div>
                 <div className='formFields'>
-                    <label htmlFor="">Teléfono</label>
+                    <label>Teléfono</label>
                     <input type="number" onChange={(e) => setTelefono(e.target.value)}/>
                 </div>
                 <div className='formFields'>
-                    <label htmlFor="">Email</label>
+                    <label>Email</label>
                     <input type="email" onChange={(e) => setEmail(e.target.value)}/>
                 </div>
-
-                {error && <p>{error}</p>}
                 
                 <button type='submit'>Comprar</button>
+
+                {error && <p>{error}</p>}
 
                 {orderId && (<h4>¡Gracias por tu compra! El código de tu orden es {orderId}</h4>)}
             </form> 

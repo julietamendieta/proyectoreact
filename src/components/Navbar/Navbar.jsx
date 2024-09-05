@@ -11,10 +11,10 @@ const Navbar = () => {
         </div>
         <div>
             <ul className="nav-list">
-                <li><NavLink to="/category/Fantasia" className="linkto" activeClassName= "active">Fantasía</NavLink></li>
-                <li><NavLink to="/category/Romance" className="linkto" activeClassName= "active">Romance</NavLink></li>
-                <li><NavLink to="/category/ThrillerMisterio" className="linkto" activeClassName= "active">Thriller/Misterio</NavLink></li>
-                <li><NavLink to="/category/FiccionLiteraria" className="linkto" activeClassName= "active">Ficción literaria</NavLink></li>
+                <li><NavLink to="/category/Fantasia" className={({isActive}) => (isActive ? "active" : "linkto")}>Fantasía</NavLink></li>
+                <li><NavLink to="/category/Romance" className={({isActive}) => (isActive ? "active" : "linkto")}>Romance</NavLink></li>
+                <li><NavLink to="/category/ThrillerMisterio" className={({isActive}) => (isActive ? "active" : "linkto")}>Thriller/Misterio</NavLink></li>
+                <li><NavLink to="/category/FiccionLiteraria" className={({isActive}) => (isActive ? "active" : "linkto")}>Ficción literaria</NavLink></li>
             </ul>
         </div>
         <CartWidget/>
