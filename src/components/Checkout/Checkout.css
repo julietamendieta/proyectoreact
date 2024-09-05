@@ -1,0 +1,58 @@
+.checkout{
+    color: rgb(97, 128, 196);
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.infoContainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.checkout h3{
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(97, 128, 196);
+}
+
+p {
+    color: rgb(97, 128, 196);
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.checkoutDetail{
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.checkoutProduct h4{
+    color: rgb(97, 128, 196);
+    font-size: 18px;
+}
+
+form{
+    padding-bottom: 10px;
+}
+
+.formFields{
+    padding: 10px;
+}
+
+.formFields label{
+    padding-right: 15px;
+}
+
+form button{
+    background-color: rgb(97, 128, 196);
+    color: white;
+    border: 1px solid rgb(97, 128, 196);
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin: 20px;
+}

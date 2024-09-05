@@ -3,6 +3,7 @@ import './ItemListContainer.css'
 import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
 import Spinner from "../Spinner/Spinner"
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
 
 const ItemListContainer = () => {
 
@@ -13,22 +14,22 @@ const ItemListContainer = () => {
   const {categoryId} = useParams();
 
   useEffect(() => {
-    const fetchData = async () => {
-      try{
-        const response = await fetch('/products.json')
-        const data = await response.json()
 
-        const filteredProducts = categoryId ? data.filter((p) => p.category === categoryId) : data;
+    setLoading(true);
 
-        setProducts(filteredProducts)
-        
-      }catch(error){
-        console.log(error)
-      }finally{
-        setLoading(false)
-      }
-    }
-    fetchData()
+    const db = getFirestore();
+
+    const myProducts = categoryId ? query(collection(db, "item"), where("category", "==", categoryId)) : collection(db, "item");
+
+    getDocs(myProducts).then((res) => {
+      const newProducts = res.docs.map((doc) => {
+        const data =doc.data();
+        return {id: doc.id, ...data};
+      });
+      setProducts(newProducts);
+    })
+    .catch((error) => console.log("Error", error))
+    .finally(() => setLoading(false));
   }, [categoryId])
 
 return (
