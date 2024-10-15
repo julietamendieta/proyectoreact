@@ -1,27 +1,28 @@
 .card{
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content:space-between;
     width: 210px;
     height: 500px;
     border: 1px solid rgb(97, 128, 196);
-    border-radius: 8px;
+    border-radius: 20px;
 }
 
 .card:hover{
-    transform: scale(1.1);
+    transform: scale(0.9);
     transition-duration: 0.5s;
 }
 
 .card img{
     height: 300px;
-    width: 200px;
-    padding: 0 5px;
+    width: 210px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .card h2{
-    font-size: 20px;
-    padding: 5px 10px;
+    font-size: 18px;
+    padding: 5px;
 }
 
 .card .author{

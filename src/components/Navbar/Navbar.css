@@ -7,9 +7,15 @@
 }
 
 .nav-logo{
+    display: flex;
     color: white;
     text-decoration: none;
     font-size: 30px;
+}
+
+.nav-logo img{
+    width: 50px;
+    height: 70px;
 }
 
 .nav-list{
@@ -25,6 +31,11 @@
     padding: 20px;
 }
 
-.active{
+.linkto:hover{
     color: dimgray;
+}
+
+.active{
+    color: rgb(14, 49, 126);
+    text-decoration: none;
 }
